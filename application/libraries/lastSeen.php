@@ -1,0 +1,1 @@
+setcookie("last_seen_there", $_SERVER["REQUEST_URI"]);

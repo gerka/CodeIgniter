@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Карточка товара</title>
+	<meta name="keywords"
+	      content=" "/>
+	<meta name="description"
+	      content=" "/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/build.css"/>
+	<link rel='stylesheet' href='css/style.css'>
+	<link rel='stylesheet' href='css/media.css'>
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/jquery-2.0.2.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="jquery-ui/jquery-ui.min.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/jquery.placeholder.js"></script>
+	<script src="js/jquery.inputmask.bundle.js"></script>
+    <script src="owl-carousel2/owl.carousel.js"></script>
+	<!-- <script src="js/main.js"></script> -->
+    <!-- Это всё для fancybox -->
+    <script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+    <link rel="stylesheet" href="fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <link rel="stylesheet" href="fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <script type="text/javascript" src="fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+    <link rel="stylesheet" href="fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+    <script type="text/javascript" src="fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+</head>
+<body>
+<div class="wrapper">
+	<header>
+		<div class="top-header container-block clearfix row">
+			<div class="logo-box col-sm-2"><img src="image/logo.png" alt="логотип"></div>
+			<div>
+				<div class="col-sm-2 header-select">
+					<select id="city">
+						<option>Росcия</option>
+						<option>Бразилия</option>
+						<option>Канада</option>
+					</select>
+				</div>
+				<div class="col-sm-2 header-select">
+					<select id="country">
+						<option>Санкт-Петербург</option>
+						<option>Москва</option>
+						<option>Новосибирск</option>
+					</select>
+				</div>
+			</div>
+			<div class="partner-link col-sm-2">
+				<a href="#">
+					Стать партнером
+				</a>
+			</div>
+			<div class="register-box col-sm-3 clearfix">
+				<div>
+					<a href="#">
+						<p>Регистрация</p>
+					</a>
+					<a href="#">
+						<p>Вход</p>
+					</a>
+				</div>
+			</div>
+			<div class="lang-box col-sm-1 pull-right">
+				<a href="#" class="active"><p>RU</p></a>
+				<a href="#"><p>ENG</p></a>
+			</div>
+			<div class="burger-menu ">
+				<a href="#"><img src="image/burger.png" alt="иконка"></a>
+			</div>
+		</div>
+
+		<nav class="container-block clearfix">
+			<ul class="nav navbar-nav menu clearfix">
+				<li><a href="#"><span>Интересное&nbsp;сейчас</span></a></li>
+				<li class="menu-item-select menu-place"><a href="#"><span>Места</span></a><span
+						class="pointer-menu hidden-arrow"></span>
+				</li>
+				<li><a href="#"><span>Мероприятия</span></a></li>
+				<li><a href="#"><span>Обучение</span></a></li>
+				<li><a href="#"><span>Мамам</span></a></li>
+				<li><a href="#"><span>Путешествия</span></a></li>
+				<li><a href="#"><span>Детям</span></a></li>
+				<li><a href="#"><span>Журнал</span></a></li>
+				<li class="visible-xs-block">
+					<div class="container-block">
+						<div class="register-box-mobile">
+							<div>
+								<a href="#">
+									<p>Регистрация</p>
+								</a>
+								<a href="#">
+									<p>Вход</p>
+								</a>
+							</div>
+						</div>
+						<div class="lang-box-mobile pull-right">
+							<a href="#" class="active"><p>RU</p></a>
+							<a href="#"><p>ENG</p></a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div class="submenu">
+			<ul class="nav container-block submenu-place hidden-submenu-place clearfix">
+				<li><a href="#"><span>Вегетарианские кафе и рестораны</span></a></li>
+				<li><a href="#"><span>Гурудвары</span></a></li>
+				<li><a href="#"><span>Клиники</span></a></li>
+				<li><a href="#"><span>Магазины</span></a></li>
+				<li><a href="#"><span>Ярмарки</span></a></li>
+				<li><a href="#"><span>Клиники аюрведа</span></a></li>
+				<li><a href="#"><span>Йоготерапия</span></a></li>
+				<li><a href="#"><span>Пренатальная</span></a></li>
+			</ul>
+		</div>
+
+	</header>
+	<main class="clearfix page-product">
+		<div class="container-block">
+			<div class="clearfix">
+
+				<div class="box-button-link">
+					<p class="change-link">
+						<span>Вы хозяин? </span><span>Хотите </span><span><a href="#" data-toggle="modal" data-target="#myModal2">внести изменения?</a></span>
+					</p>
+
+					<div class="button-base back-button">
+						<input type="submit" value="Вернуться к поиску">
+					</div>
+
+				</div>
+				<h1>
+					Ресторан Au Lac Gourmet Vegetariann
+
+				</h1>
+			</div>
+			<div class="stars-wrapper">
+				<span class="star-reiting star-yellow"></span>
+				<span class="star-reiting star-yellow"></span>
+				<span class="star-reiting star-yellow"></span>
+				<span class="star-reiting star-pale"></span>
+				<span class="star-reiting star-white"></span>
+			</div>
+			<div class="photogallery-wrapper clearfix">
+				<div class="clearfix">
+
+					<div class="large-photo-container">
+						<img class="main-image" src="image/gallery-large-photo-1.png">
+					</div>
+					<div class="map-container">
+						<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4694.448077654428!2d-117.95661805778865!3d33.696628161378406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd2737524dc675%3A0x476f2b24435e6ea8!2zQnJvb2todXJzdCBTdCwgRm91bnRhaW4gVmFsbGV5LCBDQSA5MjcwOCwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1470961557987"
+								frameborder="0" style="border:0"
+								allowfullscreen id="map-iframe"></iframe>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="small-photo-container clearfix">
+					<a class="thumb"><img src="image/gallery-small-1.png" data-image="image/gallery-large-photo-1.png"></a>
+					<a class="thumb"><img src="image/gallery-small-3.png" data-image="image/gallery-small-3.png"></a>
+					<a class="thumb"><img src="image/gallery-small-4.png" data-image="image/gallery-small-4.png"></a>
+					<a class="thumb"><img src="image/gallery-small-6.png" data-image="image/gallery-small-6.png"></a>
+					<a class="thumb"><img src="image/gallery-small-2.png" data-image="image/gallery-small-2.png"></a>
+					<a class="thumb"><img src="image/gallery-small-3.png" data-image="image/gallery-small-3.png"></a>
+					<a class="thumb"><img src="image/gallery-small-4.png" data-image="image/gallery-small-4.png"></a>
+					<a class="thumb"><img src="image/gallery-small-6.png" data-image="image/gallery-small-6.png"></a>
+					<a class="thumb"><img src="image/gallery-small-1.png" data-image="image/gallery-large-photo-1.png"></a>
+					<a class="thumb"><img src="image/gallery-small-3.png" data-image="image/gallery-small-3.png"></a>
+					<a class="thumb"><img src="image/gallery-small-4.png" data-image="image/gallery-small-4.png"></a>
+					<a class="thumb"><img src="image/gallery-small-6.png" data-image="image/gallery-small-6.png"></a>
+					<a class="thumb"><img src="image/gallery-small-2.png" data-image="image/gallery-small-2.png"></a>
+					<a class="thumb"><img src="image/gallery-small-3.png" data-image="image/gallery-small-3.png"></a>
+					<a class="thumb"><img src="image/gallery-small-4.png" data-image="image/gallery-small-4.png"></a>
+					<a class="thumb"><img src="image/gallery-small-6.png" data-image="image/gallery-small-6.png"></a>
+					<a class="thumb"><img src="image/gallery-small-1.png" data-image="image/gallery-large-photo-1.png"></a>
+				</div>
+			</div>
+			<div class="text-block-product clearfix">
+				<div class="contacts-product-box">
+					<div class="clearfix">
+						<div class="address-block">
+							<p><span class="country">Россия</span><span> / </span><span class="city">Москва</span></p>
+
+							<p><span class="street">Воздвиженка, 7/6с1, 1 этаж</span></p>
+
+							<p><span class="metro-station">Станция метро: </span><span class="name-metro-station">Арбатская
+						</span></p>
+
+							<p><span class="email">www.yogastudio.ru</span></p>
+						</div>
+						<div class="phone-block">
+							<p class="phone-number">+7 915 030-02-46</p>
+
+							<p class="phone-number">+7 495 245-57-12</p>
+						</div>
+					</div>
+					<div class="other-property">
+						<p><span class="property-name">Средний чек: </span><span class="average-check">от 350 до 500
+							рублей</span></p>
+
+						<p><span class="property-name">Время работы: </span><span class="working-hours">пн-пт: 10:00 - 22:00; сб: 11:00 - 17:00; вс: 12:00 - 17:00</span>
+						</p>
+
+						<p><span class="property-name">Название параметра: </span><span>значение параметра</span></p>
+
+						<p><span class="property-name">Название параметра: </span><span>значение параметра</span></p>
+
+						<p>Параметр без названия</p>
+					</div>
+				</div>
+				<div class="description-product-box">
+					<p> — это небольшой уютный ресторанчик вегетарианской кухни в Канберре. Несмотря на то, что здесь
+						отсутствуют мясные и рыбные блюда, посетителей всегда очень много, поэтому надо обязательно
+						предварительно бронировать столик.
+						Сюда приходят вегетарианцы и не только. Здесь можно найти огромное разнообразие блюд с имитацией
+						мяса, которые иногда сложно отличить от оригинальных. Особенно вкусны здесь блюда с тофу,
+						которых предлагается великое множество.
+						Порции очень большие для таких невысоких цен. Обслуживание быстрое и качественное. Посетив этот
+						ресторан однажды, клиенты часто возвращаются сюда снова и снова.</p>
+				</div>
+			</div>
+			<div class="teachers-block clearfix">
+				<h2>
+					Преподаватели
+				</h2>
+
+				<div class="teachers-wrapper col-md-1-5 col-sm-4 col-xs-6">
+					<div class="teachers-item">
+						<div class="ellipse-teacher teachers-1">
+						</div>
+						<p class="name-teacher">Ирина Гладковская</p>
+
+						<p class="description-teacher">Мастер йоги. Опыт преподавания боле 25 лет</p>
+					</div>
+				</div>
+				<div class="teachers-wrapper col-md-1-5 col-sm-4 col-xs-6">
+					<div class="teachers-item">
+						<div class="ellipse-teacher teachers-2">
+						</div>
+						<p class="name-teacher">Константин Петров-Романов</p>
+
+						<p class="description-teacher">Инструктор</p>
+					</div>
+				</div>
+				<div class="teachers-wrapper col-md-1-5 col-sm-4 col-xs-6">
+					<div class="teachers-item">
+						<div class="ellipse-teacher teachers-3">
+						</div>
+						<p class="name-teacher">Игорь Глебов</p>
+
+						<p class="description-teacher">Мастер йоги. Опыт преподавания боле 25 лет</p>
+					</div>
+				</div>
+				<div class="teachers-wrapper col-md-1-5 col-sm-4 col-xs-6">
+					<div class="teachers-item">
+						<div class="ellipse-teacher teachers-4">
+						</div>
+						<p class="name-teacher">Галина Семенова</p>
+					</div>
+				</div>
+				<div class="teachers-wrapper col-md-1-5 col-sm-4 col-xs-6">
+					<div class="teachers-item">
+						<div class="ellipse-teacher teachers-5">
+						</div>
+						<p class="name-teacher">Сиги Рахан</p>
+
+						<p class="description-teacher">Брахман</p>
+					</div>
+				</div>
+			</div>
+			<div class="review-block clearfix">
+				<div class="clearfix title-review">
+					<h2>Отзывы</h2>
+
+					<div class="button-base button-view-reviews">
+						<input type="submit" value="Посмотреть все">
+					</div>
+					<div class="give-feedback">
+						<img src="image/book-icon.png" alt="оставить отзыв"><a href="#" data-toggle="modal" data-target="#myModal">Оставить отзыв</a>
+					</div>
+				</div>
+				<div class="clearfix">
+					<div class="col-sm-6 col-xs-12 review-item clearfix">
+						<div class="avatar-review">
+							<img src="image/avatar-1.png" alt="отзыв">
+						</div>
+						<div class="content-review">
+							<p class="date-review">
+								18.09.15
+							</p>
+
+							<p class="name-review">
+								Флегонтова Елена
+							</p>
+
+							<p class="text-review"><span class="small-review">
+								Пришла я с нуля. не просто так. по рекомендации знакомых. Всё замечательно. Атмосфера и
+								преподаватели — именно те, что необходимы. Вы молодцы!</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-sm-6 col-xs-12 review-item clearfix">
+						<div class="avatar-review">
+							<img src="image/avatar-2.png" alt="отзыв">
+						</div>
+						<div class="content-review">
+							<p class="date-review">
+								31.05.15
+							</p>
+
+							<p class="name-review">
+								Галина Днепропетрова-Золотаревская
+							</p>
+
+							<p class="text-review"><span class="small-review">
+								Здесь свои внутренние правила, внутренняя жизнь, которые понимаешь и усваиваешь без
+								слов… Все естественно, есть внутренний ритм, уважение и любовь к своему делу. Занимаюсь
+								в группе, но восприятие такое, что занятие индивидуальное, творческое, продуманное. Чаще
+								всего занимаюсь у Лилианы.</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-sm-6 col-xs-12 review-item clearfix">
+						<div class="avatar-review">
+							<img src="image/avatar-2.png" alt="отзыв">
+						</div>
+						<div class="content-review">
+							<p class="date-review">
+								31.05.15
+							</p>
+
+							<p class="name-review">
+								Галина Днепропетрова-Золотаревская
+							</p>
+
+							<p class="text-review"><span class="small-review">
+								Здесь свои внутренние правила, внутренняя жизнь, которые понимаешь и усваиваешь без
+								слов… Все естественно, есть внутренний ритм, уважение и любовь к своему делу. Занимаюсь
+								в группе, но восприятие такое, что занятие индивидуальное, творческое, продуманное. Чаще
+								всего занимаюсь у Лилианы.</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-sm-6 col-xs-12 review-item clearfix">
+						<div class="avatar-review">
+							<img src="image/avatar-3.png" alt="отзыв">
+						</div>
+						<div class="content-review">
+							<p class="date-review">
+								18.09.15
+							</p>
+
+							<p class="name-review">
+								Флегонтова Елена
+							</p>
+
+							<p class="text-review"><span class="small-review">
+								Пришла я с нуля. не просто так. по рекомендации знакомых. Всё замечательно. Атмосфера и
+								преподаватели — именно те, что необходимы. Вы молодцы!</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="similar-products-block">
+				<div class="clearfix title-similar-products">
+
+					<h2>Вам может понравиться</h2>
+
+					<div class="button-base button-similar-products">
+						<input type="submit" value="Посмотреть все">
+					</div>
+				</div>
+				<div class="clearfix wrapper-result-item">
+					<div class="col-sm-3 col-xs-6">
+						<div class="result-item">
+							<a href="#"><img src="image/AuLacGormetVegetarian.png" alt="ресторан"></a>
+
+							<p class="result-item-city">Москва</p>
+
+							<p class="result-item-name"><a href="#">Ресторан
+								Au&nbsp;Lac&nbsp;Gormet&nbsp;Vegetarian</a>
+							</p>
+
+							<p class="result-item-comment">Повар - настоящий индус из Калькутты. Работает 24
+								часа.</p>
+						</div>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<div class="result-item">
+							<a href="#"><img src="image/Festival_kundalini-yoga.png"
+							                 alt="фестиваль кундалини-йоги"></a>
+
+							<p class="result-item-date">21 августа 2016</p>
+
+							<p class="result-item-name"><a href="#">Ежегодный фестиваль кундалини-йоги</a></p>
+
+
+						</div>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<div class="result-item">
+							<a href="#"><img src="image/Restoran_fresh_post.png" alt="вегетарианский ресторан"></a>
+
+							<p class="result-item-name"><a href="#">Вегетарианский ресторан
+								Fresh&nbsp;/&nbsp;Post@</a></p>
+
+							<p class="result-item-comment">Ниж.Сыромятническая, 5/7, стр. 9б/20, на территории
+								центра дизайна Artplay</p>
+						</div>
+					</div>
+					<div class="col-sm-3 col-xs-6">
+						<div class="result-item">
+							<a href="#"><img src="image/Pervyi_moskovskii_ashram.png"
+							                 alt="открытие первого московского ашрама"></a>
+
+							<p class="result-item-date">1 сентября 2016</p>
+
+							<p class="result-item-name"><a href="#">Открытие первого московского ашрама. </a></p>
+						</div>
+					</div>
+				</div>
+				<div class="pagination-wrapper">
+					<nav aria-label="Page navigation">
+						<ul class="pagination">
+							<li>
+								<a href="#" aria-label="Previous">
+									<span aria-hidden="true">&nbsp;</span>
+								</a>
+							</li>
+							<li><a href="#">1</a></li>
+							<li><a href="#" class="disabled mobile-hidden">2</a></li>
+							<li><a href="#" class="mobile-hidden">3</a></li>
+							<li><a href="#" class="hidden-page">...</a></li>
+							<li><a href="#">342</a></li>
+							<li><a href="#">343</a></li>
+							<li><a href="#">344</a></li>
+							<li>
+								<a href="#" aria-label="Next">
+									<span aria-hidden="true">&nbsp;</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<div class="rewiew-form-wrapper">
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="close-form" data-dismiss="modal">&nbsp;</div>
+
+							<form id="form-review" class="form-review" name="form-review" method="post">
+								<p class="title-form-review">Ваш отзыв</p>
+
+								<p class="comment-form-review"><span>*</span>Пункты, обязательные для заполнения.</p>
+								<label class="control-label" for="inputMessage">Текст отзыва</label>
+								<textarea class="input-review" name="message" rows="12" id="inputMessage"
+								          placeholder="* Текст отзыва" minlength="0"
+								          aria-invalid="false"></textarea>
+
+								<label for="nameInput" class="control-label">Имя</label>
+								<input id="nameInput" class="input-review" name="inpName" placeholder="* Имя"
+								       type="text"
+								       data-inputmask-regex="[a-zA-ZА-Яа-яЁё]+" autocomplete="off"/>
+								<label for="emailInput" class="control-label">Email</label>
+								<input id="emailInput" class="input-review" name="emailInput" placeholder="* Email"
+								       type="text" autocomplete="off"
+								        />
+
+								<label for="phoneInput" class="control-label">Телефон</label>
+								<input id="phoneInput" class="input-review input-phone" name="inpPhone"
+								       placeholder="Ваш телефон"
+								       type="text"
+								       data-inputmask-regex="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"/>
+
+								<div class="wrap-button">
+									<p class="comment-form-review confidentiality-comment">Мы заботимся о вашей
+									конфиденциальности!</p>
+									<p class="comment-form-review confidentiality-comment">Ваши данные не будут
+										переданы третьим лицам без вашего согласия.</p>
+									<input class="button-send" type="submit" value="Отправить отзыв"/>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="change-form-wrapper">
+				<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="close-form" data-dismiss="modal">&nbsp;</div>
+
+							<form id="form-change" class="form-review" name="form-change" method="post">
+								<p class="title-form-change">Внести изменения</p>
+
+								<p class="comment-form-review"><span>*</span>Пункты, обязательные для заполнения.</p>
+
+								<div class="btn-group">
+									<button type="button"
+									        class="btn btn-default dropdown-toggle dropdown-base"
+									        data-toggle="dropdown"
+									        aria-haspopup="true"
+									        aria-expanded="false">
+										Выберите раздел:<span class="blue-caret"></span>
+									</button>
+									<ul class="dropdown-menu dropdown-menu-selected">
+										<li><a href="#">Вегетарианские кафе и рестораны</a></li>
+										<li><a href="#">Ашрамы</a></li>
+										<li><a href="#">Пренатальная йога</a></li>
+									</ul>
+								</div>
+
+								<label for="namePlace" class="control-label">Название места</label>
+								<input id="namePlace" class="input-review" name="inpPlace"
+								       placeholder="* Название места"
+								       type="text"
+								       autocomplete="off"/>
+
+								<label class="control-label" for="inputChanges">Что изменить?</label>
+								<textarea class="input-review" name="changes" id="inputChanges"
+								          placeholder="* Что изменить?" minlength="0"
+								          aria-invalid="false"></textarea>
+
+
+								<label for="inputNameSurname" class="control-label">Имя, фамилия</label>
+								<input id="inputNameSurname" class="input-review" name="inputNameSurname"
+								       placeholder="* Имя, фамилия"
+								       type="text" autocomplete="off"/>
+								<label for="emailChangeInput" class="control-label">Email</label>
+								<input id="emailChangeInput" class="input-review" name="emailChangeInput" placeholder="* Email"
+								       type="text" autocomplete="off"
+								/>
+
+								<div class="wrap-button">
+									<p class="comment-form-review confidentiality-comment">Мы заботимся о вашей
+										конфиденциальности!</p>
+									<p class="comment-form-review confidentiality-comment">Ваши данные не будут
+										переданы третьим лицам без вашего согласия.</p>
+									<input class="button-send" type="submit" value="Отправить отзыв"/>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</div>
+<footer>
+	<div class="container-block">
+		<div class="clearfix">
+			<div class="lofo-footer"><img src="image/logo_footer.png" alt="логотип"></div>
+			<div class="footer-social-network">
+				<a href="#"><img src="image/facebook.png" alt="facebook"></a>
+				<a href="#"><img src="image/instagram.png" alt="instagram"></a>
+				<a href="#"><img src="image/vk.png" alt="vk"></a>
+				<a href="#"><img src="image/utube.png" alt="youtube"></a>
+
+				<p>Присоединяйтесь к нам!</p>
+			</div>
+		</div>
+		<div class="footer-wrapper-link clearfix">
+			<div class="col-sm-3 col-xs-4 col-xxs">
+				<div>
+					<ul class="nav footer-first-block">
+						<li><a href="#"><span>О проекте</span></a></li>
+						<li><a href="#"><span>Стать партнером</span></a></li>
+						<li><a href="#"><span>Контакты</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-sm-3 col-xs-4 col-xxs">
+				<div>
+					<ul class="nav footer-second-block">
+						<li><a href="#"><span>Интересное сейчас</span></a></li>
+						<li><a href="#"><span>Места</span></a></li>
+						<li><a href="#"><span>Мероприятия</span></a></li>
+						<li><a href="#"><span>Обучение</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-sm-3 col-xs-4 col-xxs">
+				<div>
+					<ul class="nav footer-third-block">
+						<li><a href="#"><span>Мамам</span></a></li>
+						<li><a href="#"><span>Путешествия</span></a></li>
+						<li><a href="#"><span>Детям</span></a></li>
+						<li><a href="#"><span>Журнал</span></a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<div class="footer-copyright">
+			<p>&copy; 2016 globe.yoga</p>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>

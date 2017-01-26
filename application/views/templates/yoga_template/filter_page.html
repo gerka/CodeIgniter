@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Фильтр мероприятий</title>
+	<meta name="keywords"
+	      content=" "/>
+	<meta name="description"
+	      content=" "/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/build.css"/>
+	<link rel='stylesheet' href='css/style.css'>
+	<link rel='stylesheet' href='css/media.css'>
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/jquery-2.0.2.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="jquery-ui/jquery-ui.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/jquery.placeholder.js"></script>
+	<script src="js/jquery.inputmask.bundle.js"></script>
+    <script src="owl-carousel2/owl.carousel.js"></script>
+	<!-- <script src="js/main.js"></script> -->
+    <!-- Это всё для fancybox -->
+    <script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+    <link rel="stylesheet" href="fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <link rel="stylesheet" href="fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <script type="text/javascript" src="fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+    <link rel="stylesheet" href="fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+    <script type="text/javascript" src="fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+</head>
+<body>
+
+<div class="wrapper">
+	<header>
+		<div class="top-header container-block clearfix row">
+			<div class="logo-box col-sm-2"><img src="image/logo.png" alt="логотип"></div>
+			<div>
+				<div class="col-sm-2 header-select">
+					<select id="city">
+						<option>Росcия</option>
+						<option>Бразилия</option>
+						<option>Канада</option>
+					</select>
+				</div>
+				<div class="col-sm-2 header-select">
+					<select id="country">
+						<option>Санкт-Петербург</option>
+						<option>Москва</option>
+						<option>Новосибирск</option>
+					</select>
+				</div>
+			</div>
+			<div class="partner-link col-sm-2">
+				<a href="#">
+					Стать партнером
+				</a>
+			</div>
+			<div class="register-box col-sm-3 clearfix">
+				<div>
+					<a href="#">
+						<p>Регистрация</p>
+					</a>
+					<a href="#">
+						<p>Вход</p>
+					</a>
+				</div>
+			</div>
+			<div class="lang-box col-sm-1 pull-right">
+				<a href="#" class="active"><p>RU</p></a>
+				<a href="#"><p>ENG</p></a>
+			</div>
+			<div class="burger-menu ">
+				<a href="#"><img src="image/burger.png" alt="иконка"></a>
+			</div>
+		</div>
+
+		<nav class="container-block clearfix">
+			<ul class="nav navbar-nav menu clearfix">
+				<li><a href="#"><span>Интересное&nbsp;сейчас</span></a></li>
+				<li class="menu-item-select menu-place"><a href="#"><span>Места</span></a><span
+						class="pointer-menu hidden-arrow"></span>
+				</li>
+				<li><a href="#"><span>Мероприятия</span></a></li>
+				<li><a href="#"><span>Обучение</span></a></li>
+				<li><a href="#"><span>Мамам</span></a></li>
+				<li><a href="#"><span>Путешествия</span></a></li>
+				<li><a href="#"><span>Детям</span></a></li>
+				<li><a href="#"><span>Журнал</span></a></li>
+				<li class="visible-xs-block">
+					<div class="container-block">
+						<div class="register-box-mobile">
+							<div>
+								<a href="#">
+									<p>Регистрация</p>
+								</a>
+								<a href="#">
+									<p>Вход</p>
+								</a>
+							</div>
+						</div>
+						<div class="lang-box-mobile pull-right">
+							<a href="#" class="active"><p>RU</p></a>
+							<a href="#"><p>ENG</p></a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div class="submenu">
+			<ul class="nav container-block submenu-place hidden-submenu-place clearfix">
+				<li><a href="#"><span>Вегетарианские кафе и рестораны</span></a></li>
+				<li><a href="#"><span>Гурудвары</span></a></li>
+				<li><a href="#"><span>Клиники</span></a></li>
+				<li><a href="#"><span>Магазины</span></a></li>
+				<li><a href="#"><span>Ярмарки</span></a></li>
+				<li><a href="#"><span>Клиники аюрведа</span></a></li>
+				<li><a href="#"><span>Йоготерапия</span></a></li>
+				<li><a href="#"><span>Пренатальная</span></a></li>
+			</ul>
+		</div>
+
+	</header>
+
+	<main class="clearfix filter-page">
+		<div class="container-block clearfix">
+			<div class="button-mobile-filter-box">
+				<div class="button-mobile-filter button-filter-open">
+					<input id="filter_button" type="submit" value="Фильтр">
+				</div>
+				<!--<div class="button-mobile-filter button-sorting-open">-->
+					<!--<input id="sorting_button" type="submit" value="Сортировка">-->
+				<!--</div>-->
+
+			</div>
+			<div class="filter-box col-sm-3">
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					<div class="panel panel-default">
+						<div class="panel-heading grey-color" role="tab" id="headingOne">
+
+							<a role="button" data-toggle="collapse" href="#collapseAge" aria-expanded="true"
+							   aria-controls="collapseAge"><h4 class="panel-title">
+								<span class="accordion-toggle-expanded"></span>
+								Возраст</h4>
+							</a>
+
+						</div>
+						<div id="collapseAge" class="panel-collapse collapse in" role="tabpanel"
+						     aria-labelledby="headingOne">
+							<div class="panel-body clearfix">
+								<form class="form-age clearfix">
+									<div class="left">
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox1">
+											<label for="checkbox1">
+												не важно
+											</label>
+										</div>
+
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox2">
+											<label for="checkbox2">
+												до 4 лет
+											</label>
+										</div>
+									</div>
+									<div class="left">
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox3">
+											<label for="checkbox3">
+												4-11 лет
+											</label>
+										</div>
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox4">
+											<label for="checkbox4">
+												старше 11 лет
+											</label>
+										</div>
+
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading grey-color" role="tab" id="headingTwo">
+
+							<a role="button" data-toggle="collapse" href="#collapseTeacher" aria-expanded="true"
+							   aria-controls="collapseTeacher">
+								<h4 class="panel-title"><span class="accordion-toggle-expanded"></span>Преподаватель
+								</h4>
+							</a>
+
+						</div>
+						<div id="collapseTeacher" class="panel-collapse collapse in" role="tabpanel"
+						     aria-labelledby="headingTwo">
+							<div class="panel-body">
+								<form class="">
+									<div>
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox5">
+											<label for="checkbox5">
+												не важно
+											</label>
+										</div>
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox6">
+											<label for="checkbox6">
+												РФ и СНГ
+											</label>
+										</div>
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox7">
+											<label for="checkbox7">
+												зарубежные
+											</label>
+										</div>
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox8" disabled>
+											<label for="checkbox8">
+												Неактивный пункт
+											</label>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="box-filter-select">
+								<div class="filter-select filter-select1">
+									<select id="teacher">
+										<option>Петров Семен Валерьевич</option>
+										<option>Ким Владимирович Петровский-Разумовский</option>
+										<option>Рапашьям Труди</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading grey-color" role="tab" id="headingInstruments">
+
+							<a role="button" data-toggle="collapse" href="#collapseInstruments" aria-expanded="true"
+							   aria-controls="collapseInstruments">
+								<h4 class="panel-title"><span class="accordion-toggle-expanded"></span>Инструменты</h4>
+							</a>
+
+						</div>
+						<div id="collapseInstruments" class="panel-collapse collapse in" role="tabpanel"
+						     aria-labelledby="headingInstruments">
+							<div class="panel-body">
+								<form class="form-age">
+									<div>
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox9">
+											<label for="checkbox9">
+												не важно
+											</label>
+										</div>
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox10">
+											<label for="checkbox10">
+												коврики, пледы
+											</label>
+										</div>
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox11">
+											<label for="checkbox11">
+												комплект айенгара
+											</label>
+										</div>
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox12">
+											<label for="checkbox12">
+												принести с собой
+											</label>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading grey-color" role="tab" id="headingCost">
+
+							<a role="button" data-toggle="collapse" href="#collapseCost" aria-expanded="true"
+							   aria-controls="collapseCost">
+								<h4 class="panel-title"><span class="accordion-toggle-expanded"></span>Стоимость</h4>
+							</a>
+
+						</div>
+						<div id="collapseCost" class="panel-collapse collapse in" role="tabpanel"
+						     aria-labelledby="headingInstruments">
+							<div class="panel-body">
+								<form class="form-age">
+									<div>
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox13">
+											<label for="checkbox13">
+												не важно
+											</label>
+										</div>
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox14">
+											<label for="checkbox14">
+												до 10$
+											</label>
+										</div>
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox15">
+											<label for="checkbox15">
+												более 10$
+											</label>
+										</div>
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox16">
+											<label for="checkbox16">
+												пожертвование
+											</label>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading grey-color" role="tab" id="headingPayment">
+
+							<a role="button" data-toggle="collapse" href="#collapsePayment" aria-expanded="true"
+							   aria-controls="collapsePayment">
+								<h4 class="panel-title"><span class="accordion-toggle-expanded"></span>Форма оплаты</h4>
+							</a>
+
+						</div>
+						<div id="collapsePayment" class="panel-collapse collapse in" role="tabpanel"
+						     aria-labelledby="headingPayment">
+							<div class="panel-body">
+								<form class="form-age">
+									<div>
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox17">
+											<label for="checkbox17">
+												не важно
+											</label>
+										</div>
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox18">
+											<label for="checkbox18">
+												наличный расчет
+											</label>
+										</div>
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox19">
+											<label for="checkbox19">
+												безналичный расчет
+											</label>
+										</div>
+
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="box-filter-select-only">
+						<div class="box-filter-select">
+							<div class="filter-select filter-select2">
+								<select id="parents">
+									<option>да</option>
+									<option>нет</option>
+									<option>не важно</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="box-filter-select-only">
+						<div class="box-filter-select">
+							<div class="filter-select filter-select3">
+								<p>Кафе:</p>
+								<select id="cafe">
+									<option>да</option>
+									<option>нет</option>
+									<option>не важно</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="box-checkbox-only">
+						<div class="panel-body clearfix">
+							<form class="form-age">
+
+								<div class="checkbox">
+									<input type="checkbox" id="checkbox20">
+									<label for="checkbox20">
+										пункт предполагающий один из 2 вариантов с переносом
+									</label>
+								</div>
+
+							</form>
+						</div>
+					</div>
+					<div class="box-checkbox-only">
+						<div class="panel-body clearfix">
+							<form class="form-age">
+
+								<div class="checkbox">
+									<input type="checkbox" id="checkbox21" checked>
+									<label for="checkbox21">
+										Выбранный пункт
+									</label>
+								</div>
+								<div class="find-arrow">
+									<span class="quantity-found">Найдено: 295</span>
+								<span class="link-show-results">
+								<a>Показать</a>
+								</span>
+								</div>
+
+							</form>
+						</div>
+					</div>
+					<div class="panel panel-default example-filter-block">
+						<div class="panel-heading" role="tab" id="headingExample">
+
+							<a class="collapsed" role="button" data-toggle="collapse" href="#collapseExample"
+							   aria-expanded="false"
+							   aria-controls="collapseExample">
+								<h4 class="panel-title"><span class="accordion-toggle-collapsed"></span>Нераскрытый
+									раздел с
+									длинным названием</h4>
+							</a>
+
+						</div>
+						<div id="collapseExample" class="panel-collapse collapse" role="tabpanel"
+						     aria-labelledby="headingPayment">
+							<div class="panel-body clearfix">
+								<form class="form-age">
+									<div class="left">
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox22">
+											<label for="checkbox22">
+												пример 1
+											</label>
+										</div>
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox23">
+											<label for="checkbox23">
+												пример 2
+											</label>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading grey-color" role="tab" id="headingExample2">
+
+							<a role="button" data-toggle="collapse" href="#collapseExample2" aria-expanded="true"
+							   aria-controls="collapseExample2">
+								<h4 class="panel-title"><span class="accordion-toggle-expanded"></span>Раскрытый раздел
+								</h4>
+							</a>
+
+						</div>
+						<div id="collapseExample2" class="panel-collapse collapse in" role="tabpanel"
+						     aria-labelledby="headingExample2">
+							<div class="panel-body clearfix">
+								<form class="clearfix">
+									<div class="left">
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox24">
+											<label for="checkbox24">
+												не важно
+											</label>
+										</div>
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox25">
+											<label for="checkbox25">
+												Пункт 1
+											</label>
+										</div>
+									</div>
+									<div class="left">
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox26">
+											<label for="checkbox26">
+												Пункт 2
+											</label>
+										</div>
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox27">
+											<label for="checkbox27">
+												Пункт 3
+											</label>
+										</div>
+
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="button-mobile-filter-box">
+						<div class="button-mobile-filter button-filter-reset">
+							<input type="submit" value="Сбросить">
+						</div>
+						<div class="button-mobile-filter button-filter-show">
+							<input type="submit" value="Показать">
+						</div>
+
+					</div>
+					<!-- <div class="button-filter-box">
+						<div class="button-sorting button-sorting-list">
+							<input type="submit" value="Показать списком">
+						</div>
+						<div class="button-sorting button-sorting-map">
+							<input type="submit" value="Показать на карте">
+						</div>
+					</div> -->
+				</div>
+			</div>
+			<div class="col-sm-9">
+				<div class="sorting-wrapper">
+					<div class="sorting-box clearfix">
+						<div class="subsections-link clearfix">
+							<p><a href="#">Подраздел 1</a></p>
+
+							<p><a href="#">Подраздел 2</a></p>
+
+							<p><a href="#">Подраздел 3</a></p>
+
+							<p><a href="#">Подраздел 4</a></p>
+						</div>
+
+						<div class="accurate-sorting-box clearfix">
+							<div class="clearfix">
+								<p class="col-sm-2">Точнее:</p>
+
+								<div class="accurate-select col-sm-10 col-xs-12 clearfix">
+									<div>
+										<div class="btn-group sorting-select btn-metro col-sm-3 col-xs-6">
+												<select id="metro" class="">
+													<option>Невский проспект</option>
+													<option>Ладожская</option>
+													<option>Технологический институт</option>
+												</select>
+										</div>
+										<div class="btn-group sorting-select btn-city col-sm-3 col-xs-6">
+											<select id="city-sorting" class="">
+												<option>Москва</option>
+												<option>Санкт-Петербург</option>
+												<option>Новосибирск</option>
+											</select>
+										</div>
+									</div>
+									<div>
+										<div class="btn-group sorting-select btn-region col-sm-3 col-xs-6">
+											<select id="region-sorting">
+												<option>Москва</option>
+												<option>Санкт-Петербург</option>
+												<option>Новосибирск</option>
+											</select>
+										</div>
+										<div class="btn-group sorting-select btn-country col-sm-3 col-xs-6">
+											<select id="country-sorting">
+												<option>Россия</option>
+												<option>Бразилия</option>
+												<option>Канада</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="button-sorting-box clearfix">
+
+						<div class="button-filter-box">
+						<div class="button-mobile-filter button-filter-reset">
+							<input type="submit" value="Сбросить">
+						</div>
+						<div class="button-mobile-filter button-filter-show">
+							<input type="submit" value="Показать">
+						</div>
+
+					</div>
+								<div>
+
+									<div class="button-sorting button-filter-box">
+										<input type="submit" value="Показать">
+									</div>
+
+<!-- 
+									<div class="button-sorting button-sorting-list">
+										<input type="submit" value="Показать списком">
+									</div> -->
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="result-wrapper">
+					<div class="clearfix wrapper-result-item">
+						<div class="col-sm-4 col-xs-6">
+							<div class="result-item">
+								<a href="#"><img src="image/AuLacGormetVegetarian.png" alt="ресторан"></a>
+
+								<p class="result-item-city">Москва</p>
+
+								<p class="result-item-name"><a href="#">Ресторан
+									Au&nbsp;Lac&nbsp;Gormet Vegetarian</a>
+								</p>
+
+								<p class="result-item-comment">Повар - настоящий индус из Калькутты. Работает 24
+									часа.</p>
+							</div>
+						</div>
+						<div class="col-sm-4 col-xs-6">
+
+							<div class="result-item">
+								<a href="#"><img src="image/Festival_kundalini-yoga.png" alt="фестиваль кундалини-йоги"></a>
+
+								<p class="result-item-date">21 августа 2016</p>
+
+								<p class="result-item-name"><a href="#">Ежегодный фестиваль кундалини-йоги</a></p>
+
+							</div>
+						</div>
+						<div class="col-sm-4 col-xs-6">
+							<div class="result-item">
+								<a href="#"><img src="image/Restoran_fresh_post.png" alt="вегетарианский ресторан"></a>
+
+								<p class="result-item-name"><a href="#">Вегетарианский ресторан
+									Fresh&nbsp;/&nbsp;Post@</a></p>
+
+								<p class="result-item-comment">Ниж.Сыромятническая, 5/7, стр. 9б/20, на территории
+									центра дизайна Artplay</p>
+							</div>
+						</div>
+						<div class="col-sm-4 col-xs-6">
+							<div class="result-item">
+								<a href="#"><img src="image/Pervyi_moskovskii_ashram.png"
+								                 alt="открытие первого московского ашрама"></a>
+
+								<p class="result-item-date">1 сентября 2016</p>
+
+								<p class="result-item-name"><a href="#">Открытие первого московского ашрама. </a></p>
+							</div>
+						</div>
+						<div class="col-sm-4 col-xs-6">
+							<div class="result-item">
+								<a href="#"><img src="image/Meropriyatie_bez_daty.png" alt="мероприятие"></a>
+
+								<p
+										class="result-item-name"><a href="#">Название мероприятия, клиники или кафе (без
+									даты)</a></p>
+							</div>
+						</div>
+						<div class="col-sm-4 col-xs-6">
+							<div class="result-item">
+								<a href="#"><img src="image/Vedicheskaya_klinaca_Shavasana.png" alt="клиника"></a>
+
+								<p class="result-item-name"><a href="#">Ведическая клиника "Шавасана"</a></p>
+
+								<p class="result-item-comment">Бесплатный массаж и масло в подарок</p>
+
+							</div>
+						</div>
+					</div>
+					<div class="pagination-wrapper">
+						<nav aria-label="Page navigation">
+							<ul class="pagination">
+								<li>
+									<a href="#" aria-label="Previous">
+										<span aria-hidden="true">&nbsp;</span>
+									</a>
+								</li>
+								<li><a href="#">1</a></li>
+								<li><a href="#" class="disabled mobile-hidden">2</a></li>
+								<li><a href="#" class="mobile-hidden">3</a></li>
+								<li><a href="#" class="hidden-page">...</a></li>
+								<li><a href="#">342</a></li>
+								<li><a href="#">343</a></li>
+								<li><a href="#">344</a></li>
+								<li>
+									<a href="#" aria-label="Next">
+										<span aria-hidden="true">&nbsp;</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</div>
+
+
+<footer>
+	<div class="container-block">
+		<div class="clearfix">
+			<div class="lofo-footer"><img src="image/logo_footer.png" alt="логотип"></div>
+			<div class="footer-social-network">
+				<a href="#"><img src="image/facebook.png" alt="facebook"></a>
+				<a href="#"><img src="image/instagram.png" alt="instagram"></a>
+				<a href="#"><img src="image/vk.png" alt="vk"></a>
+				<a href="#"><img src="image/utube.png" alt="youtube"></a>
+
+				<p>Присоединяйтесь к нам!</p>
+			</div>
+		</div>
+		<div class="footer-wrapper-link clearfix">
+			<div class="col-sm-3 col-xs-4 col-xxs">
+				<div>
+					<ul class="nav footer-first-block">
+						<li><a href="#"><span>О проекте</span></a></li>
+						<li><a href="#"><span>Стать партнером</span></a></li>
+						<li><a href="#"><span>Контакты</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-sm-3 col-xs-4 col-xxs">
+				<div>
+					<ul class="nav footer-second-block">
+						<li><a href="#"><span>Интересное сейчас</span></a></li>
+						<li><a href="#"><span>Места</span></a></li>
+						<li><a href="#"><span>Мероприятия</span></a></li>
+						<li><a href="#"><span>Обучение</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-sm-3 col-xs-4 col-xxs">
+				<div>
+					<ul class="nav footer-third-block">
+						<li><a href="#"><span>Мамам</span></a></li>
+						<li><a href="#"><span>Путешествия</span></a></li>
+						<li><a href="#"><span>Детям</span></a></li>
+						<li><a href="#"><span>Журнал</span></a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<div class="footer-copyright">
+			<p>&copy; 2016 globe.yoga</p>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>

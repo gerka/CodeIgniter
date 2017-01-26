@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+define('TEMPLATE_PATH', 'http://globe.yoga/assets/yoga_template/');
+
 /*
 |--------------------------------------------------------------------------
 | Display Debug backtrace
